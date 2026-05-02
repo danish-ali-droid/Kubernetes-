@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+   name: nginx-deployment
+   labels:
+     env: practice
+     type: frontend
+spec:
+  template:
+    metadata:
+      name: nginx-contianer
+      labels:
+        env: practice
+    spec:
+     containers:
+      - name: nginx-container
+        image: nginx
+        ports:
+          -  containerPort: 80
+  replicas: 5
+  selector:
+    matchLabels:
+      env: practice  
+  
