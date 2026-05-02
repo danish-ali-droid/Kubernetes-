@@ -20,7 +20,7 @@ kubectl apply -f pod.yaml
 ---
 ##  ReplicaSets (Scaling & Self-Healing)
 
-- A ReplicaSet ensures that a specified number of pod replicas are running at any given time.
+ A ReplicaSet ensures that a specified number of pod replicas are running at any given time.
 
 🔹 Imperative (CLI)
  Note: Directly creating a ReplicaSet via CLI is rare; usually, we scale an existing one.
@@ -64,7 +64,7 @@ kubectl apply -f deployment.yaml
 kubectl rollout history deployment/nginx-deploy
 ```
 - **Undo Change:** 
-  ```bash
+```bash
  kubectl rollout undo deployment/nginx-deploy
  ```
 ---
